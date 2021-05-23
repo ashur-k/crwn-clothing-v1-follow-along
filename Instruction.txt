@@ -1,0 +1,56 @@
+To create project 
+    => npx create-react-app crwn-clothing --template cra-template-pwa
+
+    Normally we use this 
+        => npx create-react-app crwn-clothing
+
+    I have used this command so I can create same tempalte as it was created in video
+
+    [All that changed is that you are saying you want to run 
+    create-react-app with the PWA (progressive web app) template 
+    which adds the service-worker.js file. If you don't do this, 
+    do not worry, there are just some additional steps that you 
+    will have to do in the future when we get to the PWA section of 
+    the course :)]
+
+Commands Given When app was created:
+
+    ==> yarn start
+       Starts the development server.
+
+    ==> yarn build
+        Bundles the app into static files for production.
+
+    ==>  yarn test
+         Starts the test runner.
+
+    ==> yarn eject
+        Removes this tool and copies build dependencies, configuration files
+        and scripts into the app directory. If you do this, you can’t go back!
+
+    ==> cd crwn-clothing
+    ==> yarn start
+
+    Installed NODE 
+      ==> yarn add node-sass
+        Copy pasted homepage.style.scss file
+
+    After following along these steps server was showing error:
+        Please note in video toutorial this error was shown while when instructor 
+        first started server, and I didn't saw that error, I didn't follow steps 
+        but later when I tried to get output on browser I was getting following error
+            #############################################################
+            Node Sass version 6.0.0 is incompatible with ^4.0.0 || ^5.0.0.
+            Compiling...
+            Failed to compile.
+            #############################################################
+
+        To solve error I tried to run following command and it didn't work on 
+        powershell and commandprompt terminals, but when I tried the same following
+        commands on git bash terminal they worked. Please follow them along in same order
+
+                and make sure you are in the project directory { crwn-clothing  }
+
+            ==> rm -rf yarn.lock
+            ==> rm -rf node_modules
+            ==> yarn
