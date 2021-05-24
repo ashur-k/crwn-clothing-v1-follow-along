@@ -57,3 +57,10 @@ Commands Given When app was created:
 
         Installing React Router Dome With yarn
             => yarn add react-router-dom
+
+        Setting up FireBase:
+            Created new project at firebase site
+            started new database
+
+            to install firebase:
+                => yarn add firebase
