@@ -64,3 +64,7 @@ Commands Given When app was created:
 
             to install firebase:
                 => yarn add firebase
+            
+        Installing Redux
+            => yarn add redux redux-logger react-redux
+
