@@ -68,3 +68,6 @@ Commands Given When app was created:
         Installing Redux
             => yarn add redux redux-logger react-redux
 
+        Installing Redux-persist
+
+           ==> yarn add redux-persist
