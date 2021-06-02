@@ -77,3 +77,18 @@ Commands Given When app was created:
            Setting Up Stripe
 
                 ==> yarn add react-stripe-checkout
+
+        Installing Heroku CLI from following link
+            ==> https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+            to check if heroku cli is installl 
+                => heroku --version
+
+                => heroku login - - - and then in newly browser window click login
+                => if this method not work try heroku login -i
+
+                => heroku create ash-crwn-live --buildpack https://github.com/mars/create-react-app-buildpack.git
+
+                => git push heroku master
+
+
