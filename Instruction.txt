@@ -89,7 +89,7 @@ Commands Given When app was created:
 
                 => heroku create ash-crwn-live --buildpack https://github.com/mars/create-react-app-buildpack.git
 
-                => git push heroku master
+                => git push heroku main
 
                 CSS in Java script
                 Learning using style componenets
