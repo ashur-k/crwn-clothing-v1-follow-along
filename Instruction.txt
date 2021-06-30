@@ -101,3 +101,5 @@ Firebase:
 
 
 => yarn add redux-thunk
+
+=> yarn add redux-saga
