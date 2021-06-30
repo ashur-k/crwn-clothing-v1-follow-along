@@ -100,3 +100,4 @@ Firebase:
     Query Reference:
 
 
+=> yarn add redux-thunk

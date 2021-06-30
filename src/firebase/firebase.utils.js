@@ -12,6 +12,8 @@ const config = {
     measurementId: "G-N9TKDDRW53"
   };
 
+  firebase.initializeApp(config);
+
   export const createUserProfileDocument = async (userAuth, additionalData) => {
       if (!userAuth) return;
 
@@ -71,7 +73,7 @@ export const convertCollectionsSnapshotToMap = (collections) => {
     } , {});
 }
 
-firebase.initializeApp(config);
+
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
