@@ -17,7 +17,7 @@ export function* fetchCollectionsAsync() {
     const snapshot = yield collectionRef.get();
     const collectionsMap = yield call(convertCollectionsSnapshotToMap, snapshot);
     yield put(fetchCollectionsSuccess(collectionsMap))
-  }catch (error){
+  } catch (error){
     yield put(fetchCollectionsFailure(error.message))
   }
 
