@@ -103,3 +103,15 @@ Firebase:
 => yarn add redux-thunk
 
 => yarn add redux-saga
+
+Sequnce of flow:
+    First create user.types,
+    second create actions,
+    third create reducers,
+    fouth update code in component where it get triggered
+        for this action is required to imported in function 
+    fifth sagas are going to be written:
+
+    components trigger actions, actions calls reducers, 
+    reducers and action knows same types constants and sagas 
+    are making sure everything is asynch
