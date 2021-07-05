@@ -115,3 +115,97 @@ Sequnce of flow:
     components trigger actions, actions calls reducers, 
     reducers and action knows same types constants and sagas 
     are making sure everything is asynch
+
+React Hooks Explanation:
+    Normally we use this.state in an class componenets to manage state.
+    Which we can change by using this.setstate
+    
+    Hooks is the way for us right functional componenets and gain accessbility
+    which previously was with us only if write classes components
+
+    In order to use hook we need to import them from react library
+    In this lesson I am going to look at 2 main Hooks
+
+    First One  ======== useState hook:
+        import { useState } from 'react'
+            it gives control to internal state components
+
+    useState is a function that gets the parameters 
+        to understand use state we first need to see what it gives us back
+
+        It gives us back an array with 2 values in it
+         arrray destucturing
+         const arr = [1,2,3]
+         const [a,b,c] = arr
+        
+        const [name, setName] = useState(); so in useState parematers we can give
+        intial value of the state which in above case is name
+
+        to change this value onClick={() => setName('abcdef')}
+
+        const [name, setName] = useState();
+        const [address, setAddress] = useState();
+
+        onClick={() => setName('abcdef')}
+        onClick={() => setAddress('City')}
+
+    Second is ======== useEffect hook:
+    It gives us the ablity to fire effects inside our funcitonal components
+
+    import React, { useState, useEffect } from 'react'
+
+    const [user, setUser] = useState(null);
+    const [searchQuery, setSearchQuery] = useState('Bret')
+
+    useEffect does not get back any value back insteat it gives us the function
+    that gets called/fire when ever component changes, or wheneve component updates 
+    and rerender
+
+    
+
+    useEffect(() => {
+        console.log("hello")
+    })
+
+    when our component mounts for first time this effect will fire because
+    this is mimicing component did mount life cycle, the effect will fire as well when we 
+    rerender our component in our case if we update value in below input box
+
+    Inside component
+    <input type='search' value={searchQuery} 
+        onChange={event => setSearchQuery(event.target.value)}
+        />
+
+    So what if we don't want to fire our useEffect method on every update
+    what if we only want to fire it in similar way component did mount
+
+    the only way to do that is to pass secondary parameter in useEffect
+    now this secondary parameter will be an array
+
+    useEffect(() => {
+        console.log("hello")
+    }, []) =======> what this array takes is properties that this effect
+    has access to that will trigger a rerender, 
+    
+    so in case if we only want to rerender when searchQuery changes we can pass
+    that value in array to trigger rerender
+
+    useEffect(() => {
+        console.log("hello")
+    }, [searchQuery])
+
+
+    // we can directly make useEffect async function, becasue async return promise
+    // and useEffect cannot return a value
+    useEffect(() => {
+        const fetchFunc = async () => {
+            const reponse = await fetch (
+                `https://api-address/user?username=${searchQuery}`
+            );
+            const resJson = await reponse.json();
+            setUser(resJson[0]);
+        };
+        fetchFunc();
+    }, [searchQuery])
+    so this effect only will execute when the searcQuery is changing.
+
