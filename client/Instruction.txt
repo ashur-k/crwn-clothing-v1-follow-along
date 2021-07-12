@@ -213,4 +213,20 @@ React Hooks Explanation:
     UseEffect won't be call inside conditional as there is a rule useEffect must be
     called at top level, if we want to leverage conditional we must put it inside useEffect.
     
+    srrting up server side for react
+    created folder called client
+    mover all react stuff into client
+    installing below node package
+    npm i -g nodemon
 
+    run yarn command to install all packages from package.json 
+    yarn
+
+    added this code to packaage.json, node version and npm versions
+    are required to take from coonads npv --version and node --version or npm -v, node -v
+    "engines": {
+    "node": "14.17.1",
+    "npm": "7.18.1"
+  },
+
+  yarn add axios
