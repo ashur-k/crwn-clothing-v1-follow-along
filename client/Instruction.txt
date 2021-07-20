@@ -222,6 +222,9 @@ React Hooks Explanation:
     run yarn command to install all packages from package.json 
     yarn
 
+    then
+    yarn start  
+
     added this code to packaage.json, node version and npm versions
     are required to take from coonads npv --version and node --version or npm -v, node -v
     "engines": {
