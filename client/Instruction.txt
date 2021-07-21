@@ -239,4 +239,5 @@ React Hooks Explanation:
     git push heroku main
     heroku open
 
-    yarn add compression for optimisation 
+    yarn add compression f
+        for gzipping on heroku
