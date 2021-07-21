@@ -233,3 +233,7 @@ React Hooks Explanation:
   },
 
   yarn add axios
+
+  deploying to heroku production
+    git remote
+    git push heroku main
