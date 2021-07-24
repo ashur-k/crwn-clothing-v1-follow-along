@@ -12,6 +12,7 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid darkgrey;
+     
   
       .header-block {
         text-transform: capitalize;
@@ -21,18 +22,36 @@
           width: 8%;
         }
       }
+      @media screen and (max-width: 800px) {
+        width: 135%;
+        font-size: 16px;
+        .header-block {
+          width: auto;
+        }
+      }    
+
     }
   
     .total {
       margin-top: 30px;
       margin-left: auto;
       font-size: 36px;
+      @media screen and (max-width: 800px) {
+        font-size: 22px;
+        margin-left: 0px;
+      }
     }
     .test-warning{
       text-align: center;
       margin-top: 40px;
       font-size: 24px;
       color: red;
+      @media screen and (max-width: 800px) {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 0px;
+      }
+      
     }
     button{
       margin-left: auto;
